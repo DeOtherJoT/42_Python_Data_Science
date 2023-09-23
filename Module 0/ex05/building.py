@@ -4,16 +4,17 @@ import sys
 def main():
     sys.tracebacklimit = 0
 
-    assert (len(sys.argv) <= 2), "Program takes either one argument or no argument at all"
+    assert (len(sys.argv) <= 2), "Program takes either one or no argumnets"
 
     if (len(sys.argv) == 1):
-        string = input("What is the text to count?\n")
+        print("What is the text to count?")
+        string = sys.stdin.readline()
     else:
         string = sys.argv[1]
     total = len(string)
     upper = sum(1 for c in string if c.isupper())
     lower = sum(1 for c in string if c.islower())
-    punc = sum(1 for c in string if c in "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~")
+    punc = sum(1 for c in string if c in "!\"#$%&'()*+,-./:;<=>?@][^\\_`{|}~")
     space = sum(1 for c in string if c.isspace())
     digit = sum(1 for c in string if c.isdigit())
     print("The text contains {} characters:".format(total))
