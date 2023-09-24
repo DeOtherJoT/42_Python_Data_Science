@@ -18,7 +18,6 @@ def ft_isint(string: str) -> bool:
         return (True)
 
 
-
 def filter_string(S: str, N: str):
     '''Returns a list of S words longer than N'''
     words = S.split()
@@ -30,7 +29,7 @@ def main():
 
     assert (len(sys.argv) == 3), "the arguments are bad"
     assert (check_str(sys.argv[1])), "the string has special characters"
-    assert(ft_isint(sys.argv[2])), "the integer is not integer"
+    assert (ft_isint(sys.argv[2])), "the integer is not integer"
 
     filter_string(sys.argv[1], sys.argv[2])
 
