@@ -1,4 +1,5 @@
 def ft_verify(target: list) -> bool:
+    '''Verifies if the elements of the list are either an int or a flot'''
     for x in target:
         elem_type = type(x)
         if elem_type not in (int, float) or x <= 0:
@@ -6,11 +7,12 @@ def ft_verify(target: list) -> bool:
     return (True)
 
 
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
-    '''Returns a list of BMI values based on the heights and weights provided'''
+def give_bmi(height: list[int | float], weight: list[int | float])\
+      -> list[int | float]:
+    '''Returns a list of BMI values based on the heights and weights given'''
 
     assert (len(height) == len(weight)), "The list sizes are not equal"
-    assert (ft_verify(height) and ft_verify(weight)), "The values are not valid"
+    assert (ft_verify(height) and ft_verify(weight)), "The values aren't valid"
 
     ret = []
     for h, w in zip(height, weight):
