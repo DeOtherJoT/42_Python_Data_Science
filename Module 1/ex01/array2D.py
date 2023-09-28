@@ -30,5 +30,7 @@ def slice_me(family: list, start: int, end: int) -> list:
     conv = np.array(family)
     print("My shape is : {}".format(conv.shape))
     new = family[start:end]
+    if (new == []):
+        print("WARNING: The start / end arguments produces an empty list.")
     print("My new shape is : {}".format(np.array(new).shape))
     return(new)
