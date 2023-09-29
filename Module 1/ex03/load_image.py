@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pylab as plt
 from PIL import UnidentifiedImageError
-from PIL import Image
 
 
 def ft_load(path: str) -> np.ndarray:
@@ -14,8 +13,6 @@ def ft_load(path: str) -> np.ndarray:
 
     try:
         image = plt.imread(path)
-        alt = Image.open(path)
-        print("The format of the image is : {}".format(alt.format))
         print("The shape of the image is : {}".format(image.shape))
         return (image.reshape(1,-1,3))
     except FileNotFoundError as e:
@@ -23,6 +20,4 @@ def ft_load(path: str) -> np.ndarray:
     except PermissionError as e:
         print("PermissionError:", e)
     except UnidentifiedImageError as e:
-        print("UnidentifiedImageError:", e)
-    except SyntaxError as e:
-        print("SyntaxError:", e)
+        print("UnidentifiedImageError: ", e)
