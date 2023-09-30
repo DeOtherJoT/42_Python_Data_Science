@@ -50,6 +50,9 @@ def main():
 	print(f"New shape after Transpose: {res.shape}")
 	print(res)
 
+	plt.imshow(res, cmap=plt.get_cmap('grey'))
+	plt.show()
+
 
 if __name__ == "__main__":
 	main()
