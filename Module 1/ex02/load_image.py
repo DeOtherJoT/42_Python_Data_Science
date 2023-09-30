@@ -5,6 +5,7 @@ from PIL import Image
 
 
 def ft_load(path: str) -> np.ndarray:
+    '''Function that loads an image located in <path>'''
 
     try:
         assert (type(path) == str), "Argument must be a string."
