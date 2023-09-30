@@ -2,6 +2,8 @@ import numpy as np
 
 
 def verify_list(family: list) -> bool:
+    '''Verifies that the list passed is a 2D array that is transformable 
+    by numpy'''
     try:
         temp = np.array(family)
         if (temp.ndim == 2):
