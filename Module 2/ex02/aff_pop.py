@@ -40,6 +40,7 @@ def process_data(data: pd.DataFrame):
     plt.title("Population Projections")
     plt.xlabel("Year")
     plt.ylabel("Population")
+    plt.yticks([20000000, 40000000, 60000000], ['20M', '40M', '60M'])
     plt.savefig(f"Population_{home_country}_v_{away_country}.jpg")
     # plt.show()
 
