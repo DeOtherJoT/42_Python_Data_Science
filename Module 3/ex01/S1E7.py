@@ -22,7 +22,7 @@ class Baratheon(Character):
     def __repr__(self) -> str:
         '''Returns a programmer-readable string for the class attributes
         The returned string will be able to reconstruct the class'''
-        return (f"Baratheon({self.first_name, self.is_alive})")
+        return (f"Baratheon{self.first_name, self.is_alive}")
 
 
 class Lannister(Character):
@@ -47,7 +47,7 @@ class Lannister(Character):
         '''Returns a programmer-readable string for the class attributes
         The returned string will be able to reconstruct the class'''
         return (
-            f"Lannister({self.first_name, self.is_alive})"
+            f"Lannister{self.first_name, self.is_alive}"
         )
 
     @classmethod
