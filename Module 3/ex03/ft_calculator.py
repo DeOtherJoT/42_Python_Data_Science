@@ -1,6 +1,6 @@
 class calculator:
 	'''
-	Calculator class that emulates the three basic operations,
+	Calculator class that emulates the four basic operations,
 	Addition, Subtraction, Multiplication and Division
 	between a vector and scalar object.
 	...
