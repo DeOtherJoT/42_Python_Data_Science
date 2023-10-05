@@ -29,3 +29,6 @@ class King(Baratheon, Lannister):
     def get_hairs(self):
         '''Getter function for the hair colour of the King.'''
         return (self.hairs)
+
+    def __repr__(self) -> str:
+        return (f"{type(self).__name__}{self.first_name, self.is_alive}")
