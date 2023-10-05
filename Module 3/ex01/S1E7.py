@@ -14,8 +14,10 @@ class Baratheon(Character):
 
     def __str__(self) -> str:
         '''Returns a user-readable string of the class attributes'''
-        return f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})"
-
+        return (
+            f"Character is {self.first_name} {self.family_name}, "
+            f"with {self.eyes} eye colour and {self.hairs} hair. "
+        )
     def __repr__(self) -> str:
         '''Returns a programmer-readable string for the class attributes
         The returned string will be able to reconstruct the class'''
@@ -36,9 +38,8 @@ class Lannister(Character):
     def __str__(self) -> str:
         '''Returns a user-readable string of the class attributes'''
         return (
-            f"family_name = {self.family_name}"
-            f"eyes = {self.eyes}"
-            f"hairs = {self.hairs}"
+            f"Character is {self.first_name} {self.family_name}, "
+            f"with {self.eyes} eye colour and {self.hairs} hair. "
         )
 
     def __repr__(self) -> str:
