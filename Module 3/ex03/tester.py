@@ -8,4 +8,4 @@ set2 * 5
 print('---')
 set3 = calculator([10.0, 15.0, 20.0])
 set3 - 5
-set3 / 0
+set3 / 5
