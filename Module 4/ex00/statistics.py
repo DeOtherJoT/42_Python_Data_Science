@@ -33,7 +33,7 @@ def quartile(arr: list[float]) -> tuple[float, float]:
     '''
     Returns the 25% and 75% percentile of the sorted list.
 
-    Q1: 
+    Q1:
     If len(arr) * 0.25 is an integer, then the first quartile is the mean
     of the numbers at positions len(arr) * 0.25 and [len(arr) * 0.25] + 1.
     Else, if len(arr) * 0.25 is a float, then round it up. The number at
