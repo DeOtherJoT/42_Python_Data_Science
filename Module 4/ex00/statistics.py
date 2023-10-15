@@ -23,10 +23,16 @@ def mean(arr: list[float]) -> float:
 def median(arr: list[float]) -> float:
     '''
     Returns the middle value of the sorted list.
+
+    If the list is of odd length, return the value at the middle of the
+    list.
+    If the list is of even length, return the mean of the middle two values.
     '''
     mid_val = len(arr) // 2
     if (len(arr) % 2 == 0):
-        return ((arr[mid_val] + arr[mid_val + 1]) / 2)
+        return ((arr[mid_val - 1] + arr[mid_val]) / 2)
+    else:
+        return (int(arr[mid_val]))
 
 
 def quartile(arr: list[float]) -> tuple[float, float]:
@@ -65,20 +71,21 @@ def quartile(arr: list[float]) -> tuple[float, float]:
 
 def var(arr: list[float]) -> float:
     '''
-    Returns the variance of a dataset.
+    Returns the variance of a dataset, with the formula based off of
+    MF19.
     '''
     if (len(arr) == 0):
         return (0)
     avrg = mean(arr)
     sum_data = sum((x - avrg) ** 2 for x in arr)
-    return sum_data / len(arr)
+    return (sum_data / len(arr))
 
 
 def std(arr: list[float]) -> float:
     '''
     Returns the standard deviation of a dataset.
     '''
-    return var(arr) ** 0.5
+    return (var(arr) ** 0.5)
 
 
 def ft_statistics(*args, **kwargs) -> None:
